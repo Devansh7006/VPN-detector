@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CyberShield VPN Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <span class="app-tag">CYBERSHIELD</span>
+        <button id="openWebBtn" class="link-btn" title="Open Advanced Web Dashboard">Open Web App ↗</button>
+      </div>
+      <div id="banner" class="banner neutral">Ready to Analyze</div>
+    </header>
+
+    <button id="analyzeBtn" class="primary">Scan Network Now</button>
+
+    <!-- Identified VPN Box -->
+    <div class="highlight-box" id="providerBox" style="display: none;">
+      <span class="sub-label">IDENTIFIED VPN:</span>
+      <div id="providerName" class="provider-title">--</div>
+      <div id="providerProtocol" class="provider-sub">--</div>
+    </div>
+
+    <!-- Metrics Box -->
+    <div class="box">
+      <div class="row">
+        <span class="label">Current Public IP (VPN):</span>
+        <span id="currentIp" class="val-mono">-</span>
+      </div>
+      <div class="row">
+        <span class="label">IPv6:</span>
+        <span id="currentIpv6" class="val-mono text-truncate">-</span>
+      </div>
+      <div class="row">
+        <span class="label">Location:</span>
+        <span id="location">-</span>
+      </div>
+      <div class="row">
+        <span class="label">ISP / Org:</span>
+        <span id="isp" class="text-truncate">-</span>
+      </div>
+      <div class="section-divider"></div>
+      <div class="row">
+        <span class="label">Original System IP:</span>
+        <span id="origIp" class="val-mono val-green">-</span>
+      </div>
+      <div class="row">
+        <span class="label">Physical Adapter:</span>
+        <span id="origNic" class="text-truncate">-</span>
+      </div>
+      <div class="row">
+        <span class="label">Local Network Gateway:</span>
+        <span id="gateway" class="val-mono">-</span>
+      </div>
+      <div class="row">
+        <span class="label">VPN Tunnel IP:</span>
+        <span id="tunnelIp" class="val-mono val-purple">-</span>
+      </div>
+      <div class="section-divider"></div>
+      <div class="row">
+        <span class="label">Host Machine:</span>
+        <span id="popupHost" class="text-truncate">-</span>
+      </div>
+      <div class="row">
+        <span class="label">Router Hardware:</span>
+        <span id="popupRouter" class="text-truncate">-</span>
+      </div>
+    </div>
+
+    <footer class="note">
+      <a href="http://127.0.0.1:8000" target="_blank" class="dashboard-link">Launch Full Forensic Dashboard (Map & Leaks)</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
